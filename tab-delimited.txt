@@ -1,0 +1,20 @@
+Pieturas nosaukums	Pieturas kods	Vienotais kods	Platums	Garums	Ceļa puse	Ceļa numurs	Iela	Novads	Pagasts	Ciemats
+"Meža māja"	15305	5514	56.94951	23.5123491	Kreisā		Tūristu iela	Jūrmala		
+"Meža māja"	15306	5514	56.949758	23.5132277	Labā		Tūristu iela	Jūrmala		
+1.vidusskola	11560	301	56.8166902	24.6076858	Kreisā		Kalna prospekts	Ogres novads	Ogres pilsēta	Ogre
+1.vidusskola	11528	301	56.8168269	24.6074461	Labā		Kalna prospekts	Ogres novads	Ogres pilsēta	Ogre
+16. kilometrs	15307	5515	57.0203459	24.3405732	Labā	A2		Garkalnes novads		
+18. kilometrs	15308	5517	57.0279989	24.3632728	Kreisā	A2		Garkalnes novads		
+18. kilometrs	15309	5517	57.0280886	24.3647022	Labā	A2		Garkalnes novads		
+25.CR	12580	721	56.4823655	23.0859993	Labā	P96		Auces novads	Bēnes pagasts	Bēne
+25.CR	13029	721	56.4825882	23.0851327	Kreisā	P96		Auces novads	Bēnes pagasts	Bēne
+6.līnija	15310	5519	56.6524624	23.6416042	Kreisā	P97	Dobeles šoseja	Jelgava		
+A. Pumpura iela	15311	5520	56.8185385	24.5886998	Kreisā		Andreja Pumpura iela	Ogres novads	Ogres pilsēta	Ogre
+A. Pumpura iela	15312	5520	56.818903	24.5888263	Labā		Andreja Pumpura iela	Ogres novads	Ogres pilsēta	Ogre
+A.Upīša iela	15313	5533	56.8198995	24.5767975	Labā		Jaunogres prospekts	Ogres novads	Ogres pilsēta	Ogre
+A.Upīša iela	15314	5533	56.8199419	24.577444	Kreisā		Jaunogres prospekts	Ogres novads	Ogres pilsēta	Ogre
+A/S Jūrmalas celtnieks	11892	333	56.9621928	23.7722089	Kreisā		Slokas iela	Jūrmala		
+A/S Jūrmalas celtnieks	11841	333	56.9630515	23.7721544	Labā		Slokas iela	Jūrmala		
+A/s Preiļu siers	13030	730	56.2791336	26.7195925	Kreisā	V752	Andreja Upīša iela 1	Preiļu novads	Preiļu pagasts	
+A/S Ruks	15315	781	57.301192	25.2633468	Labā		Krūmiņu iela 19	Cēsu novads	Cēsu pilsēta	Cēsis
+

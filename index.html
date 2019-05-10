@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Datu failu ielāde un apstrāde</title>
+  <script type="text/javascript">
+
+    window.onload = function() {
+      document.getElementById("loadTXT").addEventListener("click", loadTXT);
+      document.getElementById("loadXML").addEventListener("click", loadXML);
+      document.getElementById("loadJSON").addEventListener("click", loadJSON);
+    }
+
+    function loadTXT() {
+      var fileURL = "tab-delimited.txt";
+
+      var processResponse = function(body) {
+        var data = body.split(/\r?\n/g);
+        data.forEach((e, i, a) => a[i] = e.split(/\t/g));
+        return data;
+      }
+
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState == xhr.DONE && xhr.status == 200) {
+          output("TXT fails ir ielādēts.");
+          var data = processResponse(xhr.responseText);
+          useTabularData(data);
+        };
+      }
+      xhr.open('GET', fileURL);
+      xhr.send();
+      output("Ielādē TXT failu...");
+    }
+
+    function loadXML() {
+      var fileURL = "example.xml";
+
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState == xhr.DONE && xhr.status == 200) {
+          output("XML fails ir ielādēts.");
+          var data = xhr.responseXML;
+          useXMLData(data);
+        };
+      }
+      xhr.open('GET', fileURL);
+      xhr.send();
+      output("Ielādē XML failu...");
+    }
+
+    function loadJSON() {
+      var fileURL = "example.json";
+
+      var processResponse = function(body) {
+        return JSON.parse(body);
+      }
+
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState == xhr.DONE && xhr.status == 200) {
+          output("JSON fails ir ielādēts.");
+          var data = processResponse(xhr.responseText);
+          useJSONData(data);
+        };
+      }
+      xhr.open('GET', fileURL);
+      xhr.overrideMimeType('application/xml')
+      xhr.send();
+      output("Ielādē XML failu...");
+    }
+
+    function output(txt, newline) {
+      if (newline === undefined) {
+        newline = true;
+      }
+      var outputCtl = document.getElementById("output");
+      if (!outputCtl) return;
+      outputCtl.value += txt;
+      if (newline) {
+        outputCtl.value += "\n";
+      }
+    }
+
+    function useTabularData(data) {
+      output("Failā ir " + data.length + " rindiņas.");
+    }
+
+    function useXMLData(data) {
+      output("Dokumenta elementa nosaukums ir " + data.documentElement.nodeName);
+    }
+
+    function useJSONData(data) {
+      console.log(data);
+      output("JSON dati ir izvadīti konsolē.");
+    }
+
+  </script>
+  <style>
+    #output {
+      width: 500px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Datu failu ielāde un apstrāde</h1>
+  <button id="loadTXT">TXT fails (tab-delimited)</button>
+  <button id="loadXML">XML fails</button>
+  <button id="loadJSON">JSON fails</button>
+  <div>
+    <textarea id="output"></textarea>
+  </div>
+</body>
+</html>
